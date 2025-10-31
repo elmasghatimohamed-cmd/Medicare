@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --body-bg: #ffffff;
+    --body-color: #212529;
+    --card-bg: #ffffff;
+    --header-bg: #f8f9fa;
+    --footer-bg: #343a40;
+    --footer-color: #ffffff;
+    --border-color: #dee2e6;
+}
+
+[data-theme="dark"] {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #343a40;
+    --dark-color: #f8f9fa;
+    --body-bg: #121212;
+    --body-color: #e9ecef;
+    --card-bg: #1e1e1e;
+    --header-bg: #1a1a1a;
+    --footer-bg: #1a1a1a;
+    --footer-color: #e9ecef;
+    --border-color: #343a40;
+}
+
+.intro {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.intro img {
+    width: 100%;
+    height: 30em;
+}
+
+.intro .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+    color: var(--light-color);
+    width: 50vw;
+}
+
+.intro .right-side h1 {
+    font-size: 2em;
+}
+
+.intro .right-side p {
+    width: 100%;
+    text-align: center;
+}
+
+.mb-3 {
+    font-size: 2em !important;
+}
+
+.navbar,
+.card,
+.list-group-item,
+.form-control,
+.form-select,
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--body-color);
+    border-color: var(--border-color);
+}
+
+.bg-light {
+    background-color: var(--header-bg) !important;
+}
+
+.bg-dark {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-color);
+}
+
+.carousel-item {
+    height: 300px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    transition: transform 0.6s ease-in-out;
+}
+
+#healthTipsCarousel .carousel-item {
+    display: none;
+}
+
+#healthTipsCarousel .carousel-item.active {
+    display: block;
+}
+
+.doctor-card {
+    transition: transform 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.favorite-btn.active {
+    color: #dc3545;
+}
+
+.carrousel h3 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.health-indicator {
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.health-good {
+    background-color: var(--success-color);
+}
+
+.health-warning {
+    background-color: var(--warning-color);
+}
+
+.health-danger {
+    background-color: var(--danger-color);
+}
+
+.appointment-item {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.measurement-item {
+    border-left: 4px solid var(--info-color);
+    padding-left: 15px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.card-body .mb-3 label {}
+
+@media (max-width:768px) {
+    .intro .left-side {
+        display: none;
+    }
+
+    .intro .right-side {
+        width: 80vw;
+    }
+
+    .intro .right-side h1 {
+        font-size: 1.2em;
+    }
+
+    .intro .right-side p {
+        font-size: 12px;
+    }
+}
